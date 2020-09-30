@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Result from './components/Result'
 import './App.css';
 
 const App = () => {
@@ -7,8 +8,7 @@ const App = () => {
 
   return (
     <main className="react-calculator">
-      <div className="results">    
-      </div>
+      <Result/>
       <div className="numbers">
         <button>1</button>
         <button>2</button>
