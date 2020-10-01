@@ -1,10 +1,11 @@
 import React from 'react';
 
 
-const Result = () =>{
+const Result = (props) =>{
+    console.log("Render Result", props)
     return (
         <div className="result">
-            <span>0</span>
+            <span>{props.value}</span>
         </div>
     )
 }
