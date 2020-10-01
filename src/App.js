@@ -30,10 +30,9 @@ const App = () => {
      
      <Functions 
       onContentClear={() => {console.log("Content Clear")}} 
-      onDelete={() => {console.log("OnDelete")}}>
-
-
-
+      onDelete={() => {console.log("OnDelete")}}
+      
+      />
 
 
 

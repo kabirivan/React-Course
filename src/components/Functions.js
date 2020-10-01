@@ -7,7 +7,7 @@ const Functions = ({onContentClear, onDelete}) => {
     return(
 
         <section className = "functions">
-            <Button text="clear" clickHandler = {onContentClear}/>
+            <Button type = "button-long-text" text="clear" clickHandler = {onContentClear}/>
             <Button text="&larr;" clickHandler = {onDelete}/>
 
         </section>
@@ -16,7 +16,7 @@ const Functions = ({onContentClear, onDelete}) => {
 
 }
 
-Functions.PropTypes = {
+Functions.propTypes = {
     onContentClear: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired
 }
