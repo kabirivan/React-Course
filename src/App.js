@@ -1,11 +1,10 @@
 import React from 'react';
-import Result from './components/Result'
 import Button from './components/Button'
-
+import MathOperations from './components/MathOperations'
+import Result from './components/Result'
 import './App.css';
 
 const App = () => {
-  console.log('Render App')
 
   const clickHandlerFunction = (text) => {
     console.log(text)
@@ -34,13 +33,17 @@ const App = () => {
           r
         </button>
       </div>
-
       <div className="math-operations">
-        <button>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
-        <button>=</button>
+
+        <MathOperations 
+          onClickOperation={operation => 
+            console.log("Operacion: ", operation) 
+            }
+
+          onClickEqual={equal => 
+            console.log("Equal: ", equal) 
+            }
+        />
       </div>
 
     </main>
