@@ -7,9 +7,7 @@ import './App.css';
 
 const App = () => {
 
-  const clickHandlerFunction = (text) => {
-    console.log(text)
-  }
+
 
   return (
     <main className="react-calculator">
@@ -23,7 +21,6 @@ const App = () => {
       onDelete={() => {console.log("OnDelete")}}
       
       />
-
 
 
       <div className="math-operations">
