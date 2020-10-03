@@ -13,7 +13,7 @@ const App = () => {
     <main className="react-calculator">
       <Result />
       
-      <Numbers onClickNumber = {(number)=>{console.log("Number: ", number)}}/>
+      <Numbers onClickNumber = {number => console.log("Number: ", number)}/>
      
      
      <Functions 

@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from  './Button'
+import Button from './Button'
 
 // DRY: Dont Repeat yourself
 const numbers = [1,2,3,4,5,6,7,8,9,0]
 
-const renderButtons = ({onClickNumber}) => {
+const renderButtons = (onClickNumber) => {
 
     const renderButton = (number) => {
         return(
-            <Button text={number.toString()} clickHandler={onClickNumber}/>
+            <Button key={number} text={number.toString()} clickHandler={onClickNumber}/>
         )
     }
 
@@ -23,12 +23,12 @@ const renderButtons = ({onClickNumber}) => {
 const Numbers = ({onClickNumber}) => {
   
     return (
-    <section className = "numbers">     
-     
-        {renderButtons(onClickNumber)}
 
-    </section>
+        <section className = "numbers">     
+        
+            {renderButtons(onClickNumber)}
 
+        </section>
 
     )
 
