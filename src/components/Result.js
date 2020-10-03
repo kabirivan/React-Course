@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Result = ({value}) =>{
+const Result = ({value}) => {
 
     console.log("Render Result", value);
     return (

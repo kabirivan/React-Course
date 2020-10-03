@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Functions from './components/Functions'
 import MathOperations from './components/MathOperations'
 import Numbers from './components/Numbers'
@@ -6,14 +6,18 @@ import Result from './components/Result'
 import './App.css';
 
 const App = () => {
-
+  const [arrayText, setArrayText] = useState("")
+  
 
 
   return (
     <main className="react-calculator">
-      <Result />
+      <Result value = {arrayText} />
       
-      <Numbers onClickNumber = {number => console.log("Number: ", number)}/>
+      <Numbers onClickNumber = {number => {console.log("Number: ", number)
+        setArrayText(number)
+        }}
+      />
      
      
      <Functions 
