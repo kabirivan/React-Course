@@ -1,5 +1,6 @@
 /* eslint no-eval: 0 */
 import React, {useState} from 'react';
+import words from 'lodash/words'
 import Functions from './components/Functions'
 import MathOperations from './components/MathOperations'
 import Numbers from './components/Numbers'
@@ -8,11 +9,18 @@ import './App.css';
 
 const App = () => {
   const [arrayText, setArrayText] = useState("")
+  const items = words(arrayText, /[^-^+^*/]+/g)
+  const value = items.length > 0 ? items[items.length-1] : "0"
+
+  // ? Similar a un if
+  // (esVerdadero) ? (Resultado Verdadero) : (ResultadoPorFalso)
+
+  console.log(items.length)
   
 
   return (
     <main className="react-calculator">
-      <Result value = {arrayText} />
+      <Result value = {value} />
       
       <Numbers onClickNumber = {number => {console.log("Number: ", number)
         setArrayText(arrayText+number)
