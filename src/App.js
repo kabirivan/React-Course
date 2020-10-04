@@ -26,8 +26,7 @@ const App = () => {
      
      <Functions 
       onContentClear={() => setArrayText("")} 
-
-
+  
         onDelete={() => {
           if (arrayText.length > 0){
             const newArray = arrayText.substring(0, arrayText.length-1)  
