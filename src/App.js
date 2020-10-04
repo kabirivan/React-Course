@@ -14,29 +14,23 @@ const App = () => {
 
   // ? Similar a un if
   // (esVerdadero) ? (Resultado Verdadero) : (ResultadoPorFalso)
-
-  console.log(items.length)
   
 
   return (
     <main className="react-calculator">
       <Result value = {value} />
       
-      <Numbers onClickNumber = {number => {console.log("Number: ", number)
-        setArrayText(arrayText+number)
-        }}
+      <Numbers onClickNumber = {number => setArrayText(arrayText+number) }
       />
      
      
      <Functions 
-      onContentClear={() => {
-        console.log("Content Clear"); setArrayText("")}} 
+      onContentClear={() => setArrayText("")} 
 
 
         onDelete={() => {
           if (arrayText.length > 0){
             const newArray = arrayText.substring(0, arrayText.length-1)  
-            console.log("OnDelete", newArray)
             setArrayText(newArray)
           }
       }}
@@ -47,15 +41,8 @@ const App = () => {
       <div className="math-operations">
 
         <MathOperations 
-          onClickOperation={operation => {
-            console.log("Operacion: ", operation)
-            setArrayText(arrayText + operation) 
-            }}
-
-          onClickEqual={equal => {
-            console.log("Equal: ", equal); 
-            setArrayText(eval(arrayText).toString()) 
-            }}
+          onClickOperation={operation => setArrayText(arrayText + operation) }
+          onClickEqual={equal => setArrayText(eval(arrayText).toString()) }
         />
       </div>
 
