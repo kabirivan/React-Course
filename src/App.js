@@ -44,8 +44,11 @@ const App = () => {
           onClickEqual={equal => setArrayText(eval(arrayText).toString()) }
         />
       </div>
+    
 
     </main>
+
+
   );
 }
 
